@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Anybody, JetBrains_Mono } from "next/font/google"
+import AuthHeader from "@/components/auth-header" // Import AuthHeader
 import "./globals.css"
 
 const _anybody = Anybody({ subsets: ["latin"], variable: "--font-anybody" })
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <AuthHeader /> {/* Add AuthHeader here */}
+        {children}
+      </body>
     </html>
   )
 }
