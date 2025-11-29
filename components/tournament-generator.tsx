@@ -84,23 +84,6 @@ export default function TournamentGenerator() {
             >
               {canGenerate ? "Generate Schedule" : "Select Options Above"}
             </button>
-
-            {/* Click Counter */}
-            <div className="flex items-center justify-center gap-3 text-xs font-mono text-[#6b6b8a]">
-              <span>INTERACTIONS:</span>
-              <div className="flex gap-1">
-                {Array.from({ length: 10 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={cn(
-                      "w-2 h-4 transition-colors duration-200",
-                      i < clickCount ? "bg-[#00ff87]" : "bg-[#2a2a3e]",
-                    )}
-                  />
-                ))}
-              </div>
-              <span className="text-[#00ff87]">{clickCount}/10</span>
-            </div>
           </div>
         </TechCard>
 
